@@ -12,6 +12,7 @@
 namespace FastDevil.Project{
     class ObjectData{
         private readonly static object? ObjecType;
+        // Shows memory address of object
         public static unsafe object GetRAMaddr(object Addr){
             IntPtr ptr;
             TypedReference refr;
@@ -21,10 +22,12 @@ namespace FastDevil.Project{
             Console.WriteLine(RAMaddr);
             return ptr;
         }
+        // Returns type
         public static unsafe int? TypeOf(object Obj) {
             Console.WriteLine(Obj);
             return null;
         }
+        // Returns size of object in bytes
         public unsafe static object? ByteSize<Type>(Type Obj){
             Console.WriteLine(sizeof(Type));
             return sizeof(Type);
